@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAML Test</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if (!username) { %>
+    <h2>Not logged in...</h2>
+    <form method="get" action="/login">
+      <button type="submit">Login</button>
+  </form>
+
+    <% } else { %>
+    <h2>Hello, <%= username %>.</h2>
+    (your e-mail is <%=mail %>)
+
+    <form method="get" action="../logout" id='logout'>
+      <button type="submit">Logout</button>
+    <%  } %>
+
+    
+  </form>
+  </body>
+</html>
